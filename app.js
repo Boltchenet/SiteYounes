@@ -68,10 +68,10 @@ const autoAnimateSelectors = [
 ];
 
 const autoAnimateNodes = document.querySelectorAll(autoAnimateSelectors.join(','));
-autoAnimateNodes.forEach((node) => node.classList.add('fade-in'));
+autoAnimateNodes.forEach((node) => node.classList.add('animate-on-scroll'));
 
 function initScrollAnimations() {
-  const animateElements = document.querySelectorAll('.fade-in');
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
   if (!('IntersectionObserver' in window)) {
     animateElements.forEach((el) => el.classList.add('visible'));
     return;
@@ -123,35 +123,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initFadeIns();
   createVisualChart();
-
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.fade-in').forEach((el) => el.classList.add('visible'));
-  });
 });
 
-
-const parallaxTargets = document.querySelectorAll('.hero-text, .hero-visual, .data-visual, .card, .project-card, .skill-card, .info-card');
-parallaxTargets.forEach((el) => el.classList.add('parallax'));
-
-let parallaxX = 0;
-let parallaxY = 0;
-let ticking = false;
-
-function applyParallax() {
-  parallaxTargets.forEach((el) => {
-    el.style.setProperty('--px', `${parallaxX}px`);
-    el.style.setProperty('--py', `${parallaxY}px`);
-  });
-  ticking = false;
-}
-
-window.addEventListener('mousemove', (event) => {
-  const { innerWidth, innerHeight } = window;
-  parallaxX = (event.clientX / innerWidth - 0.5) * 12;
-  parallaxY = (event.clientY / innerHeight - 0.5) * 12;
-
-  if (!ticking) {
-    window.requestAnimationFrame(applyParallax);
-    ticking = true;
-  }
-});
