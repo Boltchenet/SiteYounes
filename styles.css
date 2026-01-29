@@ -1039,6 +1039,25 @@ body.light .section.light {
   color: var(--text-dark);
 }
 
+body.light .section.dark {
+  background: var(--bg-dark-2);
+  color: var(--text-light);
+}
+
+body.light .section.dark .muted {
+  color: rgba(241, 245, 249, 0.7);
+}
+
+body.light .section.dark .contact-card,
+body.light .section.dark .contact-panel,
+body.light .section.dark .socials a {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.light .section.dark .contact-panel {
+  background: rgba(255, 255, 255, 0.06);
+}
+
 body.light .skill-card {
   background: #fff;
   color: var(--text-dark);
