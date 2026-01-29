@@ -68,10 +68,10 @@ const autoAnimateSelectors = [
 ];
 
 const autoAnimateNodes = document.querySelectorAll(autoAnimateSelectors.join(','));
-autoAnimateNodes.forEach((node) => node.classList.add('reveal-smooth'));
+autoAnimateNodes.forEach((node) => node.classList.add('fade-in'));
 
 function initScrollAnimations() {
-  const animateElements = document.querySelectorAll('.reveal-smooth');
+  const animateElements = document.querySelectorAll('.fade-in');
   if (!('IntersectionObserver' in window)) {
     animateElements.forEach((el) => el.classList.add('visible'));
     return;
@@ -123,65 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initFadeIns();
   createVisualChart();
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.fade-in').forEach((el) => el.classList.add('visible'));
+  });
 });
 
-
-// Smooth cursor + parallax
-const prefersCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
-
-if (!prefersCoarsePointer) {
-  const cursor = document.createElement('div');
-  cursor.className = 'custom-cursor';
-  const cursorRing = document.createElement('div');
-  cursorRing.className = 'custom-cursor-ring';
-  document.body.appendChild(cursor);
-  document.body.appendChild(cursorRing);
-
-  let cursorX = window.innerWidth / 2;
-  let cursorY = window.innerHeight / 2;
-  let ringX = cursorX;
-  let ringY = cursorY;
-
-  function animateCursor() {
-    ringX += (cursorX - ringX) * 0.12;
-    ringY += (cursorY - ringY) * 0.12;
-    cursor.style.transform = `translate(${cursorX - 9}px, ${cursorY - 9}px)`;
-    cursorRing.style.transform = `translate(${ringX - 21}px, ${ringY - 21}px)`;
-    requestAnimationFrame(animateCursor);
-  }
-
-  window.addEventListener('mousemove', (event) => {
-    cursorX = event.clientX;
-    cursorY = event.clientY;
-  });
-
-  window.addEventListener('mousedown', () => {
-    cursor.classList.add('is-active');
-    cursorRing.classList.add('is-active');
-  });
-
-  window.addEventListener('mouseup', () => {
-    cursor.classList.remove('is-active');
-    cursorRing.classList.remove('is-active');
-  });
-
-  const hoverTargets = document.querySelectorAll('a, button, .btn, .project-card, .skill-card, .info-card, .data-visual');
-  hoverTargets.forEach((el) => {
-    el.classList.add('hover-glow');
-    el.addEventListener('mouseenter', () => {
-      cursor.classList.add('is-active');
-      cursorRing.classList.add('is-active');
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.classList.remove('is-active');
-      cursorRing.classList.remove('is-active');
-    });
-  });
-
-  requestAnimationFrame(animateCursor);
-} else {
-  document.body.style.cursor = 'auto';
-}
 
 const parallaxTargets = document.querySelectorAll('.hero-text, .hero-visual, .data-visual, .card, .project-card, .skill-card, .info-card');
 parallaxTargets.forEach((el) => el.classList.add('parallax'));
