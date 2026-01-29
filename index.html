@@ -1,0 +1,394 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CV en ligne de Younes Chiker — Data Scientist / Analyst / Engineer" />
+  <title>Younes Chiker — Data & Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="lang-fr">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-dot"></span>
+        Younes Chiker
+      </a>
+      <nav class="nav">
+        <a href="#profil"><span data-lang="fr">Profil</span><span data-lang="en">Profile</span></a>
+        <a href="#competences"><span data-lang="fr">Compétences</span><span data-lang="en">Skills</span></a>
+        <a href="#projets"><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></a>
+        <a href="#parcours"><span data-lang="fr">Parcours</span><span data-lang="en">Background</span></a>
+        <a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-text fade-in">
+          <p class="pill">
+            <span data-lang="fr">Étudiant en BUT Data Science · 19 ans</span>
+            <span data-lang="en">Data Science undergrad · 19 years old</span>
+          </p>
+          <h1 class="hero-stack">
+            <span>Data.</span>
+            <span>Analytics.</span>
+            <span class="accent">Engineering.</span>
+          </h1>
+          <p class="lead">
+            <span data-lang="fr">Passionné par l’analyse et la visualisation, je transforme les données en décisions actionnables.</span>
+            <span data-lang="en">Passionate about analytics and visualization, I turn data into actionable decisions.</span>
+          </p>
+          <div class="hero-actions fade-in delay-1">
+            <a class="btn primary" href="assets/CV-Younes-Chiker.pdf" download>
+              <span data-lang="fr">Télécharger le CV</span><span data-lang="en">Download CV</span>
+            </a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/younes-chiker" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn ghost" href="#projets">
+              <span data-lang="fr">Voir les projets</span><span data-lang="en">View projects</span>
+            </a>
+          </div>
+          <div class="hero-stats fade-in delay-2">
+            <div>
+              <strong>5+</strong>
+              <span data-lang="fr">projets data</span><span data-lang="en">data projects</span>
+            </div>
+            <div>
+              <strong>8+</strong>
+              <span data-lang="fr">outils maîtrisés</span><span data-lang="en">tools mastered</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span data-lang="fr">langues</span><span data-lang="en">languages</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-in delay-2">
+          <div class="data-visual animate-on-scroll">
+            <div class="visual-header">
+              <div class="visual-title">
+                <span class="visual-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <rect x="7" y="12" width="2.5" height="6" rx="1" fill="currentColor"/>
+                    <rect x="11" y="9" width="2.5" height="9" rx="1" fill="currentColor"/>
+                    <rect x="15" y="6" width="2.5" height="12" rx="1" fill="currentColor"/>
+                  </svg>
+                </span>
+                Dashboard Analytique
+              </div>
+              <div class="visual-actions" aria-hidden="true">
+                <span class="visual-ellipsis"></span>
+              </div>
+            </div>
+            <div class="visual-content">
+              <div class="metric">
+                <div class="metric-value">87%</div>
+                <div class="metric-label">Conversion</div>
+                <div class="metric-change positive"><span class="metric-arrow up"></span>12%</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">42K</div>
+                <div class="metric-label">Utilisateurs</div>
+                <div class="metric-change positive"><span class="metric-arrow up"></span>5%</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">3.2s</div>
+                <div class="metric-label">Temps moyen</div>
+                <div class="metric-change negative"><span class="metric-arrow down"></span>8%</div>
+              </div>
+            </div>
+            <div class="visual-chart" id="visual-chart"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil" class="section">
+      <div class="container profile-layout">
+        <div class="profile-heading">
+          <h2><span data-lang="fr">Qui je suis ?</span><span data-lang="en">About me</span></h2>
+          <p><span data-lang="fr">Profil étudiant</span><span data-lang="en">Student profile</span></p>
+        </div>
+        <div class="profile-main">
+          <div class="card animate-on-scroll profile-card">
+            <p>
+              <span data-lang="fr">🎓 Profil Étudiant de 19 ans en 2ᵉ année de BUT Data Science, je développe mes compétences en analyse de données, programmation, statistiques et apprentissage automatique. J’aime particulièrement explorer et préparer des jeux de données, concevoir des modèles prédictifs et créer des visualisations claires, afin de répondre à des problématiques intéressantes.</span>
+              <span data-lang="en">🎓 19-year-old student in 2nd year of the BUT Data Science program. I develop skills in data analysis, programming, statistics, and machine learning. I enjoy exploring and preparing datasets, building predictive models, and creating clear visualizations to solve meaningful problems.</span>
+            </p>
+          </div>
+          <div class="info-bullets">
+            <div class="info-card animate-on-scroll">
+              <h3><span data-lang="fr">Centres d’intérêt</span><span data-lang="en">Interests</span></h3>
+              <ul>
+                <li><span data-lang="fr">Sport, jeux vidéo, histoire</span><span data-lang="en">Sports, video games, history</span></li>
+                <li><span data-lang="fr">Voyages & culture</span><span data-lang="en">Travel & culture</span></li>
+              </ul>
+            </div>
+            <div class="info-card animate-on-scroll">
+              <h3><span data-lang="fr">Objectifs</span><span data-lang="en">Goals</span></h3>
+              <ul>
+                <li><span data-lang="fr">Devenir Data Scientist.</span><span data-lang="en">Become a Data Scientist.</span></li>
+                <li><span data-lang="fr">Évoluer en France ou à l’international.</span><span data-lang="en">Grow in France or internationally.</span></li>
+              </ul>
+            </div>
+            <div class="info-card animate-on-scroll">
+              <h3><span data-lang="fr">Langues</span><span data-lang="en">Languages</span></h3>
+              <ul>
+                <li><span data-lang="fr">Français — Natif</span><span data-lang="en">French — Native</span></li>
+                <li><span data-lang="fr">Anglais — B1</span><span data-lang="en">English — B1</span></li>
+                <li><span data-lang="fr">Espagnol — B1</span><span data-lang="en">Spanish — B1</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section light">
+      <div class="container">
+        <div class="section-title">
+          <h2><span data-lang="fr">Compétences Data</span><span data-lang="en">Data Skills</span></h2>
+          <p><span data-lang="fr">Logiciels & outils maîtrisés.</span><span data-lang="en">Software & tools.</span></p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card animate-on-scroll">
+            <h3><span data-lang="fr">Programmation</span><span data-lang="en">Programming</span></h3>
+            <ul>
+              <li><img class="skill-icon" src="assets/images/skills/python.svg" alt="">Python</li>
+              <li><img class="skill-icon" src="assets/images/skills/r.svg" alt="">R</li>
+              <li><img class="skill-icon" src="assets/images/skills/sql.svg" alt="">SQL</li>
+              <li><img class="skill-icon" src="assets/images/skills/sas.svg" alt="">SAS</li>
+            </ul>
+          </div>
+          <div class="skill-card animate-on-scroll">
+            <h3><span data-lang="fr">BI & Data</span><span data-lang="en">BI & Data</span></h3>
+            <ul>
+              <li><img class="skill-icon" src="assets/images/skills/powerbi.svg" alt="">Power BI</li>
+              <li><img class="skill-icon" src="assets/images/skills/excel.svg" alt="">Excel</li>
+              <li><img class="skill-icon" src="assets/images/skills/access.svg" alt="">Access</li>
+              <li>DAX</li>
+            </ul>
+          </div>
+          <div class="skill-card animate-on-scroll">
+            <h3><span data-lang="fr">Bureautique</span><span data-lang="en">Office Tools</span></h3>
+            <ul>
+              <li><img class="skill-icon" src="assets/images/skills/powerpoint.svg" alt="">PowerPoint</li>
+              <li><img class="skill-icon" src="assets/images/skills/office.svg" alt="">Pack Office</li>
+              <li><img class="skill-icon" src="assets/images/skills/excel.svg" alt="">Reporting (Excel)</li>
+              <li><img class="skill-icon" src="assets/images/skills/chart.svg" alt="">Dataviz</li>
+            </ul>
+          </div>
+          <div class="skill-card animate-on-scroll">
+            <h3><span data-lang="fr">Méthodes</span><span data-lang="en">Methods</span></h3>
+            <ul>
+              <li>Statistiques</li>
+              <li>Régressions</li>
+              <li>Séries temporelles</li>
+              <li>Prévision</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2><span data-lang="fr">Mes projets</span><span data-lang="en">Projects</span></h2>
+          <p><span data-lang="fr">Études académiques & analyses appliquées.</span><span data-lang="en">Academic studies & applied analyses.</span></p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/images/projects/happiness.jpg" alt="World Happiness Report 2024" />
+            <div class="project-body">
+              <h3>World Happiness Report 2024</h3>
+              <p><span data-lang="fr">Analyse des facteurs socio-économiques influençant le score de bonheur, modélisation et visualisations avec R.</span><span data-lang="en">Analysis of socio-economic factors affecting happiness scores, modeling and visualization in R.</span></p>
+              <div class="project-tags"><span>R</span><span>Statistiques</span><span>Dataviz</span></div>
+              <div class="project-links">
+                <a class="project-link" href="assets/projects/happiness-report.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+                <a class="project-link ghost" href="assets/projects/conduite-projet-happiness.pdf" target="_blank" rel="noopener"><span data-lang="fr">Conduite de projet</span><span data-lang="en">Project management</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/images/projects/nuclear.jpg" alt="Production nucléaire USA (2001-2024)" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Production nucléaire USA (2001-2024)</span><span data-lang="en">US Nuclear Production (2001-2024)</span></h3>
+              <p><span data-lang="fr">Décomposition saisonnière, modélisation et prévisions 2025 sur une série temporelle énergétique.</span><span data-lang="en">Seasonal decomposition, modeling, and 2025 forecasts on an energy time series.</span></p>
+              <div class="project-tags"><span>Séries temporelles</span><span>Prévision</span><span>R</span></div>
+              <a class="project-link" href="assets/projects/series-temporelles-nucleaire.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/images/projects/sampling.jpg" alt="Estimation par échantillonnage" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Estimation par échantillonnage</span><span data-lang="en">Sampling Estimation</span></h3>
+              <p><span data-lang="fr">Intervalles de confiance et tests d’hypothèses sur un dataset d’astrophysique.</span><span data-lang="en">Confidence intervals and hypothesis testing on an astrophysics dataset.</span></p>
+              <div class="project-tags"><span>R</span><span>Statistiques</span><span>Inférence</span></div>
+              <a class="project-link" href="assets/projects/estimation-echantillonnage.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/images/projects/growth.jpg" alt="Courbes de croissance 5-19 ans" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Courbes de croissance 5-19 ans</span><span data-lang="en">Growth Curves 5-19 years</span></h3>
+              <p><span data-lang="fr">Régressions linéaires/polynomiales et comparaison de deux pays insulaires.</span><span data-lang="en">Linear/polynomial regressions and comparison of two island countries.</span></p>
+              <div class="project-tags"><span>Régression</span><span>Python</span><span>R</span></div>
+              <a class="project-link" href="assets/projects/regression-croissance-enfants.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/images/projects/dvd.jpg" alt="Optimisation d’implantation (DVD)" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Optimisation d’implantation (DVD)</span><span data-lang="en">Store Placement Optimization (DVD)</span></h3>
+              <p><span data-lang="fr">Extraction SQL, reporting Excel/Access et recommandations opérationnelles.</span><span data-lang="en">SQL extraction, Excel/Access reporting, and operational recommendations.</span></p>
+              <div class="project-tags"><span>SQL</span><span>Excel</span><span>Reporting</span></div>
+              <span class="project-note"><span data-lang="fr">Synthèse interne</span><span data-lang="en">Internal summary</span></span>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/images/projects/survey.jpg" alt="Enquête pratiques culturelles" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Enquête pratiques culturelles</span><span data-lang="en">Cultural Practices Survey</span></h3>
+              <p><span data-lang="fr">Conception du questionnaire, traitement des réponses et restitution Power BI.</span><span data-lang="en">Survey design, response processing, and Power BI reporting.</span></p>
+              <div class="project-tags"><span>LimeSurvey</span><span>Power BI</span><span>Dataviz</span></div>
+              <span class="project-note">Université Paris Cité</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcours" class="section light">
+      <div class="container">
+        <div class="section-title">
+          <h2><span data-lang="fr">Parcours</span><span data-lang="en">Background</span></h2>
+          <p><span data-lang="fr">Formation & expériences.</span><span data-lang="en">Education & experience.</span></p>
+        </div>
+        <div class="parcours-grid">
+          <div class="parcours-col">
+            <h3 class="parcours-title"><span data-lang="fr">Parcours scolaire</span><span data-lang="en">Education</span></h3>
+            <div class="stack">
+              <div class="stack-item animate-on-scroll">
+                <h3>BUT Science des Données</h3>
+                <p>IUT Paris Rives de Seine · Paris 16</p>
+                <span>09/2024 — 06/2027</span>
+                <a class="program-link" href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2023-12/science-des-donn-es-30879.pdf" target="_blank" rel="noopener">
+                  <span data-lang="fr">Programme national</span><span data-lang="en">National syllabus</span>
+                </a>
+              </div>
+              <div class="stack-item animate-on-scroll">
+                <h3>Baccalauréat STI2D</h3>
+                <p>Lycée Le Corbusier · Poissy</p>
+                <span>09/2022 — 06/2024</span>
+              </div>
+              <div class="stack-item animate-on-scroll">
+                <h3>Cordées de la Réussite</h3>
+                <p>ESSEC Business School · Cergy</p>
+                <span>09/2023 — 06/2024</span>
+              </div>
+              <div class="stack-item animate-on-scroll">
+                <h3>PSC (Protection Civile)</h3>
+                <p>Formation · Poissy</p>
+                <span>02/2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="parcours-col">
+            <h3 class="parcours-title"><span data-lang="fr">Expériences professionnelles</span><span data-lang="en">Experience</span></h3>
+            <div class="timeline">
+              <div class="timeline-item animate-on-scroll">
+                <div class="timeline-meta">06/2025 — 08/2025</div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <img src="assets/images/sncf-logo.jpg" alt="SNCF" />
+                    <div>
+                      <h3>SNCF · La Défense</h3>
+                      <p><span data-lang="fr">Agent d’accueil</span><span data-lang="en">Front Desk Agent</span></p>
+                    </div>
+                  </div>
+                  <ul>
+                    <li><span data-lang="fr">Assistance aux personnes à mobilité réduite.</span><span data-lang="en">Assistance for passengers with reduced mobility.</span></li>
+                    <li><span data-lang="fr">Maintenance de premier niveau sur les automates de vente.</span><span data-lang="en">First-level maintenance on ticketing machines.</span></li>
+                    <li><span data-lang="fr">Information/vente en bureau de vente.</span><span data-lang="en">Information and ticketing support.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-item animate-on-scroll">
+                <div class="timeline-meta">01/2023 — 12/2023</div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <img src="assets/images/pizzatime.png" alt="Pizza Time" />
+                    <div>
+                      <h3>Pizza Time</h3>
+                      <p><span data-lang="fr">Livreur polyvalent</span><span data-lang="en">Delivery Associate</span></p>
+                    </div>
+                  </div>
+                  <ul>
+                    <li><span data-lang="fr">Transport de marchandises sensibles avec respect des délais.</span><span data-lang="en">Transported sensitive goods with strict deadlines.</span></li>
+                    <li><span data-lang="fr">Préparation du poste d’accueil et vérification du matériel.</span><span data-lang="en">Prepared the front desk and checked equipment.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section dark">
+      <div class="container contact">
+        <div>
+          <h2><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></h2>
+          <p><span data-lang="fr">Disponible pour un stage data ou des projets analytiques.</span><span data-lang="en">Available for data internships or analytics projects.</span></p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <h3>Email</h3>
+              <p><a class="copy-link" href="#" data-copy="youneschikerpro@gmail.com">youneschikerpro@gmail.com</a></p>
+            </div>
+            <div class="contact-card">
+              <h3><span data-lang="fr">Téléphone</span><span data-lang="en">Phone</span></h3>
+              <p><a class="copy-link" href="#" data-copy="06 67 07 64 80">06 67 07 64 80</a></p>
+            </div>
+            <div class="contact-card">
+              <h3><span data-lang="fr">Localisation</span><span data-lang="en">Location</span></h3>
+              <p>Poissy, Île-de-France</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <h3><span data-lang="fr">Réseaux</span><span data-lang="en">Social</span></h3>
+          <p class="muted"><span data-lang="fr">Ajoutez vos liens professionnels.</span><span data-lang="en">Add your professional links.</span></p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/younes-chiker" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="assets/CV-Younes-Chiker.pdf" download><span data-lang="fr">Télécharger le CV</span><span data-lang="en">Download CV</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Younes Chiker. Tous droits réservés.</p>
+      <p class="mono">Data · Analytics · Engineering</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

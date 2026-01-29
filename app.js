@@ -1,0 +1,210 @@
+﻿const toggle = document.querySelector('.theme-toggle');
+const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+const storedTheme = localStorage.getItem('theme');
+
+if (storedTheme === 'light' || (!storedTheme && prefersLight)) {
+  document.body.classList.add('light');
+}
+
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  });
+}
+
+const langToggle = document.querySelector('.lang-toggle');
+const storedLang = localStorage.getItem('lang') || 'fr';
+
+if (storedLang === 'en') {
+  document.body.classList.remove('lang-fr');
+  document.body.classList.add('lang-en');
+  document.documentElement.lang = 'en';
+}
+
+if (langToggle) {
+  langToggle.textContent = document.body.classList.contains('lang-en') ? 'FR' : 'EN';
+  langToggle.addEventListener('click', () => {
+    const isEnglish = document.body.classList.toggle('lang-en');
+    document.body.classList.toggle('lang-fr', !isEnglish);
+    document.documentElement.lang = isEnglish ? 'en' : 'fr';
+    localStorage.setItem('lang', isEnglish ? 'en' : 'fr');
+    langToggle.textContent = isEnglish ? 'FR' : 'EN';
+  });
+}
+
+const copyLinks = document.querySelectorAll('.copy-link');
+copyLinks.forEach((link) => {
+  link.addEventListener('click', async (event) => {
+    event.preventDefault();
+    const value = link.getAttribute('data-copy');
+    if (!value) return;
+
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch (err) {
+      window.prompt('Copier:', value);
+    }
+
+    link.classList.add('copied');
+    setTimeout(() => link.classList.remove('copied'), 1500);
+  });
+});
+
+// Auto-apply scroll animation to common blocks.
+const autoAnimateSelectors = [
+  '.section-title',
+  '.card',
+  '.skill-card',
+  '.project-card',
+  '.timeline-item',
+  '.stack-item',
+  '.contact-card',
+  '.contact-panel',
+  '.data-visual',
+  '.profile-card',
+  '.info-card',
+  '.project-thumb'
+];
+
+const autoAnimateNodes = document.querySelectorAll(autoAnimateSelectors.join(','));
+autoAnimateNodes.forEach((node) => node.classList.add('reveal-smooth'));
+
+function initScrollAnimations() {
+  const animateElements = document.querySelectorAll('.reveal-smooth');
+  if (!('IntersectionObserver' in window)) {
+    animateElements.forEach((el) => el.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+
+  animateElements.forEach((el) => observer.observe(el));
+}
+
+function initFadeIns() {
+  const fadeElements = document.querySelectorAll('.fade-in');
+  fadeElements.forEach((element, index) => {
+    element.style.animationDelay = `${index * 0.2}s`;
+  });
+}
+
+function createVisualChart() {
+  const visualChart = document.getElementById('visual-chart');
+  if (!visualChart) return;
+
+  const chartData = [65, 80, 75, 90, 85, 95, 70];
+  const barWidth = 20;
+  const gap = 16;
+
+  visualChart.innerHTML = '';
+
+  chartData.forEach((value, index) => {
+    const bar = document.createElement('div');
+    bar.classList.add('chart-bar');
+    bar.style.left = `${index * (barWidth + gap)}px`;
+    bar.style.height = `${value}%`;
+    bar.style.animationDelay = `${index * 0.12}s`;
+    visualChart.appendChild(bar);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollAnimations();
+  initFadeIns();
+  createVisualChart();
+});
+
+
+// Smooth cursor + parallax
+const prefersCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+if (!prefersCoarsePointer) {
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  const cursorRing = document.createElement('div');
+  cursorRing.className = 'custom-cursor-ring';
+  document.body.appendChild(cursor);
+  document.body.appendChild(cursorRing);
+
+  let cursorX = window.innerWidth / 2;
+  let cursorY = window.innerHeight / 2;
+  let ringX = cursorX;
+  let ringY = cursorY;
+
+  function animateCursor() {
+    ringX += (cursorX - ringX) * 0.12;
+    ringY += (cursorY - ringY) * 0.12;
+    cursor.style.transform = `translate(${cursorX - 9}px, ${cursorY - 9}px)`;
+    cursorRing.style.transform = `translate(${ringX - 21}px, ${ringY - 21}px)`;
+    requestAnimationFrame(animateCursor);
+  }
+
+  window.addEventListener('mousemove', (event) => {
+    cursorX = event.clientX;
+    cursorY = event.clientY;
+  });
+
+  window.addEventListener('mousedown', () => {
+    cursor.classList.add('is-active');
+    cursorRing.classList.add('is-active');
+  });
+
+  window.addEventListener('mouseup', () => {
+    cursor.classList.remove('is-active');
+    cursorRing.classList.remove('is-active');
+  });
+
+  const hoverTargets = document.querySelectorAll('a, button, .btn, .project-card, .skill-card, .info-card, .data-visual');
+  hoverTargets.forEach((el) => {
+    el.classList.add('hover-glow');
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('is-active');
+      cursorRing.classList.add('is-active');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('is-active');
+      cursorRing.classList.remove('is-active');
+    });
+  });
+
+  requestAnimationFrame(animateCursor);
+} else {
+  document.body.style.cursor = 'auto';
+}
+
+const parallaxTargets = document.querySelectorAll('.hero-text, .hero-visual, .data-visual, .card, .project-card, .skill-card, .info-card');
+parallaxTargets.forEach((el) => el.classList.add('parallax'));
+
+let parallaxX = 0;
+let parallaxY = 0;
+let ticking = false;
+
+function applyParallax() {
+  parallaxTargets.forEach((el) => {
+    el.style.setProperty('--px', `${parallaxX}px`);
+    el.style.setProperty('--py', `${parallaxY}px`);
+  });
+  ticking = false;
+}
+
+window.addEventListener('mousemove', (event) => {
+  const { innerWidth, innerHeight } = window;
+  parallaxX = (event.clientX / innerWidth - 0.5) * 12;
+  parallaxY = (event.clientY / innerHeight - 0.5) * 12;
+
+  if (!ticking) {
+    window.requestAnimationFrame(applyParallax);
+    ticking = true;
+  }
+});
