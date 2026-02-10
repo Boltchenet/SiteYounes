@@ -33,6 +33,42 @@ if (langToggle) {
   });
 }
 
+const shareToggle = document.querySelector('.share-toggle');
+const siteShareUrl = 'https://site-younes.vercel.app/';
+
+function flashShareCopied() {
+  if (!shareToggle) return;
+  shareToggle.classList.add('copied');
+  setTimeout(() => shareToggle.classList.remove('copied'), 1200);
+}
+
+if (shareToggle) {
+  shareToggle.addEventListener('click', async () => {
+    const isEnglish = document.body.classList.contains('lang-en');
+    const shareData = {
+      title: 'Younes Chiker — Data & Analytics',
+      text: isEnglish ? 'Check out my portfolio.' : 'Decouvre mon portfolio.',
+      url: siteShareUrl
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+    } catch (err) {
+      if (err && err.name === 'AbortError') return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(siteShareUrl);
+      flashShareCopied();
+    } catch (err) {
+      window.prompt(isEnglish ? 'Copy this link:' : 'Copier ce lien :', siteShareUrl);
+    }
+  });
+}
+
 const copyLinks = document.querySelectorAll('.copy-link');
 copyLinks.forEach((link) => {
   link.addEventListener('click', async (event) => {

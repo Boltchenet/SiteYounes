@@ -24,6 +24,15 @@
         <a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></a>
       </nav>
       <div class="header-actions">
+        <button class="share-toggle" type="button" aria-label="Partager le site">
+          <span class="share-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M12 3v11" />
+              <path d="M8.5 6.5L12 3l3.5 3.5" />
+              <path d="M6 10.5v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-7" />
+            </svg>
+          </span>
+        </button>
         <button class="lang-toggle" type="button" aria-label="Switch language">EN</button>
         <button class="theme-toggle" type="button" aria-label="Changer de thème">
           <span></span>
@@ -72,9 +81,6 @@
                   </svg>
                 </span>
                 Dashboard Analytique
-              </div>
-              <div class="visual-actions" aria-hidden="true">
-                <span class="visual-ellipsis"></span>
               </div>
             </div>
             <div class="visual-content">
@@ -160,10 +166,10 @@
           <div class="skill-card animate-on-scroll">
             <h3><span data-lang="fr">BI & Data</span><span data-lang="en">BI & Data</span></h3>
             <ul>
-              <li><img class="skill-icon" src="assets/images/skills/powerbi.svg" alt="">Power BI</li>
+              <li><img class="skill-icon" src="assets/images/skills/powerbi.svg" alt="">Power BI + DAX</li>
               <li><img class="skill-icon" src="assets/images/skills/excel.svg" alt="">Excel</li>
               <li><img class="skill-icon" src="assets/images/skills/access.svg" alt="">Access</li>
-              <li>DAX</li>
+              <li><img class="skill-icon" src="assets/images/skills/chart.svg" alt="">Dataviz</li>
             </ul>
           </div>
           <div class="skill-card animate-on-scroll">
@@ -171,8 +177,8 @@
             <ul>
               <li><img class="skill-icon" src="assets/images/skills/powerpoint.svg" alt="">PowerPoint</li>
               <li><img class="skill-icon" src="assets/images/skills/office.svg" alt="">Pack Office</li>
+              <li><img class="skill-icon project-icon" src="assets/images/skills/project.svg" alt="">Project</li>
               <li><img class="skill-icon" src="assets/images/skills/excel.svg" alt="">Reporting (Excel)</li>
-              <li><img class="skill-icon" src="assets/images/skills/chart.svg" alt="">Dataviz</li>
             </ul>
           </div>
           <div class="skill-card animate-on-scroll">
@@ -196,60 +202,51 @@
         </div>
         <div class="projects-grid">
           <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/images/projects/happiness.jpg" alt="World Happiness Report 2024" />
+            <img class="project-thumb" src="assets/clean/images/projects/happiness.jpg" alt="World Happiness Report 2024" />
             <div class="project-body">
               <h3>World Happiness Report 2024</h3>
               <p><span data-lang="fr">Analyse des facteurs socio-économiques influençant le score de bonheur, modélisation et visualisations avec R.</span><span data-lang="en">Analysis of socio-economic factors affecting happiness scores, modeling and visualization in R.</span></p>
               <div class="project-tags"><span>R</span><span>Statistiques</span><span>Dataviz</span></div>
               <div class="project-links">
-                <a class="project-link" href="assets/projects/happiness-report.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
-                <a class="project-link ghost" href="assets/projects/conduite-projet-happiness.pdf" target="_blank" rel="noopener"><span data-lang="fr">Conduite de projet</span><span data-lang="en">Project management</span></a>
+                <a class="project-link" href="assets/clean/projects/happiness-report.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+                <a class="project-link ghost" href="assets/clean/projects/conduite-projet-happiness.pdf" target="_blank" rel="noopener"><span data-lang="fr">Conduite de projet</span><span data-lang="en">Project management</span></a>
               </div>
             </div>
           </article>
           <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/images/projects/nuclear.jpg" alt="Production nucléaire USA (2001-2024)" />
+            <img class="project-thumb" src="assets/clean/images/projects/nuclear.jpg" alt="Production nucléaire USA (2001-2024)" />
             <div class="project-body">
               <h3><span data-lang="fr">Production nucléaire USA (2001-2024)</span><span data-lang="en">US Nuclear Production (2001-2024)</span></h3>
               <p><span data-lang="fr">Décomposition saisonnière, modélisation et prévisions 2025 sur une série temporelle énergétique.</span><span data-lang="en">Seasonal decomposition, modeling, and 2025 forecasts on an energy time series.</span></p>
               <div class="project-tags"><span>Séries temporelles</span><span>Prévision</span><span>R</span></div>
-              <a class="project-link" href="assets/projects/series-temporelles-nucleaire.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+              <a class="project-link" href="assets/clean/projects/series-temporelles-nucleaire.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
             </div>
           </article>
           <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/images/projects/sampling.jpg" alt="Estimation par échantillonnage" />
+            <img class="project-thumb" src="assets/clean/images/projects/sampling.jpg" alt="Estimation par échantillonnage" />
             <div class="project-body">
               <h3><span data-lang="fr">Estimation par échantillonnage</span><span data-lang="en">Sampling Estimation</span></h3>
               <p><span data-lang="fr">Intervalles de confiance et tests d’hypothèses sur un dataset d’astrophysique.</span><span data-lang="en">Confidence intervals and hypothesis testing on an astrophysics dataset.</span></p>
               <div class="project-tags"><span>R</span><span>Statistiques</span><span>Inférence</span></div>
-              <a class="project-link" href="assets/projects/estimation-echantillonnage.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+              <a class="project-link" href="assets/clean/projects/estimation-echantillonnage.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
             </div>
           </article>
           <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/images/projects/growth.jpg" alt="Courbes de croissance 5-19 ans" />
+            <img class="project-thumb" src="assets/clean/images/projects/growth.png" alt="Courbes de croissance 5-19 ans" />
             <div class="project-body">
               <h3><span data-lang="fr">Courbes de croissance 5-19 ans</span><span data-lang="en">Growth Curves 5-19 years</span></h3>
               <p><span data-lang="fr">Régressions linéaires/polynomiales et comparaison de deux pays insulaires.</span><span data-lang="en">Linear/polynomial regressions and comparison of two island countries.</span></p>
               <div class="project-tags"><span>Régression</span><span>Python</span><span>R</span></div>
-              <a class="project-link" href="assets/projects/regression-croissance-enfants.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+              <a class="project-link" href="assets/clean/projects/regression-croissance-enfants.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
             </div>
           </article>
           <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/images/projects/dvd.jpg" alt="Optimisation d’implantation (DVD)" />
-            <div class="project-body">
-              <h3><span data-lang="fr">Optimisation d’implantation (DVD)</span><span data-lang="en">Store Placement Optimization (DVD)</span></h3>
-              <p><span data-lang="fr">Extraction SQL, reporting Excel/Access et recommandations opérationnelles.</span><span data-lang="en">SQL extraction, Excel/Access reporting, and operational recommendations.</span></p>
-              <div class="project-tags"><span>SQL</span><span>Excel</span><span>Reporting</span></div>
-              <span class="project-note"><span data-lang="fr">Synthèse interne</span><span data-lang="en">Internal summary</span></span>
-            </div>
-          </article>
-          <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/images/projects/survey.jpg" alt="Enquête pratiques culturelles" />
+            <img class="project-thumb" src="assets/clean/images/projects/survey.png" alt="Enquête pratiques culturelles" />
             <div class="project-body">
               <h3><span data-lang="fr">Enquête pratiques culturelles</span><span data-lang="en">Cultural Practices Survey</span></h3>
               <p><span data-lang="fr">Conception du questionnaire, traitement des réponses et restitution Power BI.</span><span data-lang="en">Survey design, response processing, and Power BI reporting.</span></p>
               <div class="project-tags"><span>LimeSurvey</span><span>Power BI</span><span>Dataviz</span></div>
-              <span class="project-note">Université Paris Cité</span>
+              <a class="project-link" href="assets/clean/projects/enquete-pratiques-culturelles.pptx" target="_blank" rel="noopener"><span data-lang="fr">Voir la présentation</span><span data-lang="en">View presentation</span></a>
             </div>
           </article>
         </div>
@@ -277,11 +274,13 @@
               <div class="stack-item animate-on-scroll">
                 <h3>Baccalauréat STI2D</h3>
                 <p>Lycée Le Corbusier · Poissy</p>
+                <p>• Maths - Physique et EE</p>
                 <span>09/2022 — 06/2024</span>
               </div>
               <div class="stack-item animate-on-scroll">
                 <h3>Cordées de la Réussite</h3>
                 <p>ESSEC Business School · Cergy</p>
+                <p>• Participation à un concours d'éloquence avec l'ESSEC et la Compagnie Amonine.</p>
                 <span>09/2023 — 06/2024</span>
               </div>
               <div class="stack-item animate-on-scroll">
@@ -294,6 +293,23 @@
           <div class="parcours-col">
             <h3 class="parcours-title"><span data-lang="fr">Expériences professionnelles</span><span data-lang="en">Experience</span></h3>
             <div class="timeline">
+              <div class="timeline-item animate-on-scroll">
+                <div class="timeline-meta">08/2025 — 02/2026</div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <img src="assets/images/transpack-logo.png" alt="Transpack" />
+                    <div>
+                      <h3>Transpack</h3>
+                      <p><span data-lang="fr">Livreur polyvalent</span><span data-lang="en">Multi-skilled delivery driver</span></p>
+                    </div>
+                  </div>
+                  <ul>
+                    <li><span data-lang="fr">Transport de marchandises sensibles, avec respect strict des délais.</span><span data-lang="en">Transported sensitive goods with strict deadline compliance.</span></li>
+                    <li><span data-lang="fr">Gestion des stocks.</span><span data-lang="en">Managed inventory and stock flow.</span></li>
+                    <li><span data-lang="fr">Suivi des livraisons via outils numériques.</span><span data-lang="en">Tracked deliveries using digital tools.</span></li>
+                  </ul>
+                </div>
+              </div>
               <div class="timeline-item animate-on-scroll">
                 <div class="timeline-meta">06/2025 — 08/2025</div>
                 <div class="timeline-content">
@@ -356,11 +372,9 @@
         <div class="contact-panel">
           <h3><span data-lang="fr">Réseaux</span><span data-lang="en">Social</span></h3>
           <p class="muted"><span data-lang="fr">Ajoutez vos liens professionnels.</span><span data-lang="en">Add your professional links.</span></p>
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/younes-chiker" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
           <div class="contact-actions">
             <a class="btn primary" href="assets/CV-Younes-Chiker.pdf" download><span data-lang="fr">Télécharger le CV</span><span data-lang="en">Download CV</span></a>
+            <a class="btn ghost linkedin-cta" href="https://www.linkedin.com/in/younes-chiker" target="_blank" rel="noopener"><span data-lang="fr">Voir mon LinkedIn</span><span data-lang="en">Open LinkedIn</span></a>
           </div>
         </div>
       </div>
@@ -377,3 +391,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+

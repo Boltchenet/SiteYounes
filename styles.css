@@ -151,6 +151,41 @@ img {
   cursor: pointer;
 }
 
+.share-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.share-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.share-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.share-toggle.copied {
+  border-color: rgba(46, 230, 166, 0.75);
+  color: var(--accent);
+}
+
 .theme-toggle {
   width: 44px;
   height: 24px;
@@ -197,6 +232,10 @@ body.light .theme-toggle span {
 }
 
 body.light .lang-toggle {
+  background: #ffffff;
+}
+
+body.light .share-toggle {
   background: #ffffff;
 }
 
@@ -383,37 +422,6 @@ body.light .data-visual {
   height: 16px;
 }
 
-.visual-actions {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.visual-ellipsis {
-  position: relative;
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.visual-ellipsis::before,
-.visual-ellipsis::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.visual-ellipsis::before {
-  top: -8px;
-}
-
-.visual-ellipsis::after {
-  top: 8px;
-}
 
 body.light .visual-icon {
   color: var(--accent);
@@ -424,9 +432,6 @@ body.light .visual-header {
   border-bottom: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-body.light .visual-actions {
-  color: rgba(15, 23, 42, 0.5);
-}
 
 body.light .metric-label {
   color: rgba(15, 23, 42, 0.65);
@@ -623,6 +628,18 @@ body.light .card {
 .skill-icon {
   width: 22px;
   height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.project-icon {
+  width: 22px;
+  height: 22px;
+  transform: scale(1.7);
+  transform-origin: center;
+}
+
+body.light .skill-icon {
+  filter: brightness(0) invert(0);
 }
 
 .projects-grid {
@@ -883,6 +900,20 @@ body.light .card {
   margin-top: 12px;
 }
 
+.linkedin-cta {
+  border-color: rgba(46, 230, 166, 0.55);
+  background: rgba(46, 230, 166, 0.1);
+}
+
+.linkedin-cta:hover {
+  box-shadow: 0 10px 26px rgba(46, 230, 166, 0.18);
+}
+
+body.light .linkedin-cta {
+  border-color: rgba(46, 230, 166, 0.7);
+  background: rgba(46, 230, 166, 0.14);
+}
+
 .copy-link {
   position: relative;
   font-weight: 600;
@@ -1097,3 +1128,4 @@ body:not(.light) .program-link {
   opacity: 1;
   transform: translateY(0);
 }
+
