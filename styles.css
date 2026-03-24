@@ -647,6 +647,7 @@ body.light .skill-icon {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   margin-top: 32px;
+  align-items: stretch;
 }
 
 .project-card {
@@ -657,6 +658,7 @@ body.light .skill-icon {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 
 .project-thumb {
@@ -668,8 +670,18 @@ body.light .skill-icon {
 
 .project-body {
   padding: 18px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  flex: 1;
+}
+
+.project-body p {
+  color: var(--text-light);
+}
+
+body.light .project-body p {
+  color: var(--text-muted);
 }
 
 .project-tags {
@@ -677,6 +689,7 @@ body.light .skill-icon {
   flex-wrap: wrap;
   gap: 8px;
   font-size: 0.75rem;
+  margin-top: auto;
 }
 
 .project-tags span {
@@ -704,6 +717,7 @@ body.light .skill-icon {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .project-link.ghost {
@@ -845,12 +859,40 @@ body.light .skill-icon {
   border-radius: 16px;
   padding: 18px;
   background: rgba(255, 255, 255, 0.04);
+  display: grid;
+  gap: 10px;
 }
 
 .stack-item span {
   font-family: var(--mono);
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.education-inline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.education-inline img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: contain;
+  object-position: center;
+  flex: 0 0 56px;
+  background: #0f1622;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px;
+}
+
+.education-inline h3 {
+  margin-bottom: 2px;
+}
+
+.education-inline p {
+  margin: 0;
 }
 
 .contact {

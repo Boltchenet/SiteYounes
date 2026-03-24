@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="title desc">
+  <title id="title">Lycée Le Corbusier</title>
+  <desc id="desc">Badge décoratif pour la section parcours scolaire.</desc>
+  <rect width="720" height="240" rx="28" fill="#0f1622"/>
+  <rect x="1" y="1" width="718" height="238" rx="27" fill="none" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="42" y="42" width="120" height="156" rx="18" fill="#162235"/>
+  <rect x="62" y="64" width="80" height="112" rx="10" fill="#55b7ff" opacity="0.2"/>
+  <path d="M92 64v112M110 86H92M110 116H92M110 146H92" stroke="#eaf2ff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M123 70c12 0 20 11 20 24 0 10-4 16-9 22-4 5-8 10-9 21h-4c-1-11-5-16-9-21-5-6-9-12-9-22 0-13 8-24 20-24Z" fill="#f5f7fb"/>
+  <path d="M122 138h3c8 15 13 28 18 49h-18l-6-25-6 25H95c5-21 10-34 18-49h3l3 10 3-10Z" fill="#f5f7fb"/>
+  <text x="194" y="97" fill="#f7f7fb" font-family="Sora, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="2">PARCOURS SCOLAIRE</text>
+  <text x="194" y="146" fill="#f7f7fb" font-family="Sora, Arial, sans-serif" font-size="38" font-weight="700">Lycée Le Corbusier</text>
+  <text x="194" y="184" fill="#a7b1c2" font-family="'IBM Plex Mono', monospace" font-size="18">Poissy · STI2D · Maths / Physique / EE</text>
+</svg>
