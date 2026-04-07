@@ -56,11 +56,11 @@
             <span class="accent">Engineering.</span>
           </h1>
           <p class="lead">
-            <span data-lang="fr">Passionné par l’analyse et la visualisation, je transforme les données en décisions actionnables.</span>
-            <span data-lang="en">Passionate about analytics and visualization, I turn data into actionable decisions.</span>
+            <span data-lang="fr">Étudiant en sciences des données, je transforme les données en informations utiles pour comprendre, analyser et décider.</span>
+            <span data-lang="en">Data science student, I turn data into useful information to understand, analyze, and decide.</span>
           </p>
           <div class="hero-actions fade-in delay-1">
-            <a class="btn primary" href="assets/CV-Younes-Chiker.pdf" download>
+            <a class="btn primary" href="assets/cv-younes-chiker.pdf" download>
               <span data-lang="fr">Télécharger le CV</span><span data-lang="en">Download CV</span>
             </a>
             <a class="btn ghost" href="https://www.linkedin.com/in/younes-chiker" target="_blank" rel="noopener">LinkedIn</a>
@@ -71,18 +71,36 @@
         </div>
         <div class="hero-visual fade-in delay-2">
           <div class="data-visual animate-on-scroll">
-            <div class="visual-video-wrap">
-              <video
-                class="visual-video"
-                src="assets/clean/videos/dashboard-analytique.mp4"
-                autoplay
-                muted
-                loop
-                playsinline
-                controls
-                preload="metadata"
-              ></video>
+            <div class="visual-header">
+              <div class="visual-title">
+                <span class="visual-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <rect x="7" y="12" width="2.5" height="6" rx="1" fill="currentColor"/>
+                    <rect x="11" y="9" width="2.5" height="9" rx="1" fill="currentColor"/>
+                    <rect x="15" y="6" width="2.5" height="12" rx="1" fill="currentColor"/>
+                  </svg>
+                </span>
+                Dashboard Analytique
+              </div>
             </div>
+            <div class="visual-content">
+              <div class="metric">
+                <div class="metric-value">87%</div>
+                <div class="metric-label">Conversion</div>
+                <div class="metric-change positive"><span class="metric-arrow up"></span>12%</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">42K</div>
+                <div class="metric-label">Utilisateurs</div>
+                <div class="metric-change positive"><span class="metric-arrow up"></span>5%</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">3.2s</div>
+                <div class="metric-label">Temps moyen</div>
+                <div class="metric-change negative"><span class="metric-arrow down"></span>8%</div>
+              </div>
+            </div>
+            <div class="visual-chart" id="visual-chart"></div>
           </div>
         </div>
       </div>
@@ -92,12 +110,11 @@
       <div class="container profile-layout">
         <div class="profile-heading">
           <h2><span data-lang="fr">Qui je suis ?</span><span data-lang="en">About me</span></h2>
-          <p><span data-lang="fr">Profil étudiant</span><span data-lang="en">Student profile</span></p>
         </div>
         <div class="profile-main">
           <div class="card animate-on-scroll profile-card">
             <p>
-              <span data-lang="fr">🎓 Profil Étudiant de 19 ans en 2ᵉ année de BUT Data Science, je développe mes compétences en analyse de données, programmation, statistiques et apprentissage automatique. J’aime particulièrement explorer et préparer des jeux de données, concevoir des modèles prédictifs et créer des visualisations claires, afin de répondre à des problématiques intéressantes.</span>
+              <span data-lang="fr">🎓 Étudiant de 19 ans en 2ᵉ année de BUT Data Science, je développe mes compétences en analyse de données, programmation, statistiques et apprentissage automatique. J’aime particulièrement explorer et préparer des jeux de données, concevoir des modèles prédictifs et créer des visualisations claires, afin de répondre à des problématiques intéressantes.</span>
               <span data-lang="en">🎓 19-year-old student in 2nd year of the BUT Data Science program. I develop skills in data analysis, programming, statistics, and machine learning. I enjoy exploring and preparing datasets, building predictive models, and creating clear visualizations to solve meaningful problems.</span>
             </p>
           </div>
@@ -179,8 +196,8 @@
     <section id="projets" class="section">
       <div class="container">
         <div class="section-title">
-          <h2><span data-lang="fr">Mes projets</span><span data-lang="en">Projects</span></h2>
-          <p><span data-lang="fr">Études académiques & analyses appliquées.</span><span data-lang="en">Academic studies & applied analyses.</span></p>
+          <h2><span data-lang="fr">Mes projets & SAE</span><span data-lang="en">Projects & Coursework</span></h2>
+          <p><span data-lang="fr">Études académiques, SAE et analyses appliquées.</span><span data-lang="en">Academic studies, coursework, and applied analyses.</span></p>
         </div>
         <div class="projects-grid">
           <article class="project-card animate-on-scroll">
@@ -190,15 +207,6 @@
               <p><span data-lang="fr">Analyse des facteurs socio-économiques influençant le score de bonheur, modélisation et visualisations avec R.</span><span data-lang="en">Analysis of socio-economic factors affecting happiness scores, modeling and visualization in R.</span></p>
               <div class="project-tags"><span>R</span><span>Statistiques</span><span>Dataviz</span></div>
               <a class="project-link" href="assets/clean/projects/happiness-report.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
-            </div>
-          </article>
-          <article class="project-card animate-on-scroll">
-            <img class="project-thumb" src="assets/clean/images/projects/happiness.jpg" alt="Conduite de projet Happiness" />
-            <div class="project-body">
-              <h3><span data-lang="fr">Conduite de projet Happiness</span><span data-lang="en">Happiness Project Management</span></h3>
-              <p><span data-lang="fr">Pilotage du projet, organisation des tâches et méthodologie appliquée au rapport Happiness.</span><span data-lang="en">Project planning, task organization, and delivery method for the Happiness report.</span></p>
-              <div class="project-tags"><span>Gestion de projet</span><span>Data</span><span>Méthodo</span></div>
-              <a class="project-link" href="assets/clean/projects/conduite-projet-happiness.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
             </div>
           </article>
           <article class="project-card animate-on-scroll">
@@ -232,22 +240,39 @@
             <img class="project-thumb" src="assets/clean/images/projects/survey.png" alt="Enquête pratiques culturelles" />
             <div class="project-body">
               <h3><span data-lang="fr">Enquête pratiques culturelles</span><span data-lang="en">Cultural Practices Survey</span></h3>
-              <p><span data-lang="fr">Synthèse des résultats et analyse statistique sur les pratiques culturelles.</span><span data-lang="en">Summary of key findings and statistical analysis on cultural practices.</span></p>
-              <div class="project-tags"><span>Enquête</span><span>Statistiques</span><span>Synthèse</span></div>
-              <a class="project-link" href="assets/clean/projects/rapport-final.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le rapport</span><span data-lang="en">View report</span></a>
+              <p><span data-lang="fr">Conception du questionnaire, traitement des réponses et restitution Power BI.</span><span data-lang="en">Survey design, response processing, and Power BI reporting.</span></p>
+              <div class="project-tags"><span>LimeSurvey</span><span>Power BI</span><span>Dataviz</span></div>
+              <a class="project-link" href="assets/clean/projects/enquete-pratiques-culturelles.pptx" target="_blank" rel="noopener"><span data-lang="fr">Voir la présentation</span><span data-lang="en">View presentation</span></a>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/clean/images/projects/sae-conformite-cover.jpg" alt="SAE conformité RGPD" />
+            <div class="project-body">
+              <h3><span data-lang="fr">SAE Conformité</span><span data-lang="en">Compliance Coursework</span></h3>
+              <p><span data-lang="fr">Support SAE dédié à la conformité et aux enjeux RGPD.</span><span data-lang="en">Coursework material focused on compliance and GDPR topics.</span></p>
+              <div class="project-tags"><span>SAE</span><span>RGPD</span><span>Conformité</span></div>
+              <a class="project-link" href="assets/clean/projects/sae-conformite.pdf" target="_blank" rel="noopener"><span data-lang="fr">Voir le PDF</span><span data-lang="en">View PDF</span></a>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/clean/images/projects/analyse-instagram-cover.jpg" alt="Analyse Instagram" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Analyse Instagram</span><span data-lang="en">Instagram Analysis</span></h3>
+              <p><span data-lang="fr">Présentation autour d’une analyse Instagram avec support visuel dédié.</span><span data-lang="en">Presentation built around an Instagram analysis with a dedicated visual support.</span></p>
+              <div class="project-tags"><span>SAE</span><span>Instagram</span><span>Présentation</span></div>
+              <a class="project-link" href="assets/clean/projects/analyse-instagram.pptx" target="_blank" rel="noopener"><span data-lang="fr">Voir la présentation</span><span data-lang="en">View presentation</span></a>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <img class="project-thumb" src="assets/clean/images/projects/presentation-efron-cover.jpg" alt="Présentation Efron" />
+            <div class="project-body">
+              <h3><span data-lang="fr">Présentation Efron</span><span data-lang="en">Efron Presentation</span></h3>
+              <p><span data-lang="fr">Support de présentation ajouté au portfolio avec son visuel associé.</span><span data-lang="en">Presentation material added to the portfolio with its associated visual.</span></p>
+              <div class="project-tags"><span>SAE</span><span>Présentation</span><span>Data</span></div>
+              <a class="project-link" href="assets/clean/projects/presentation-efron.pptx" target="_blank" rel="noopener"><span data-lang="fr">Voir la présentation</span><span data-lang="en">View presentation</span></a>
             </div>
           </article>
         </div>
-        <article class="project-card project-video-banner animate-on-scroll">
-          <div class="project-video-wrap">
-            <video class="project-video" src="assets/clean/videos/rolex-data.mp4" width="640" height="360" autoplay muted loop playsinline preload="metadata"></video>
-          </div>
-          <div class="project-body">
-            <h3><span data-lang="fr">Projet Data Rolex</span><span data-lang="en">Rolex Data Project</span></h3>
-            <p><span data-lang="fr">Présentation vidéo d’un projet data avec visualisations et analyse statistique.</span><span data-lang="en">Video presentation of a data project with visualizations and statistical analysis.</span></p>
-            <div class="project-tags"><span>Data</span><span>Statistiques</span><span>Présentation</span></div>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -262,22 +287,37 @@
             <h3 class="parcours-title"><span data-lang="fr">Parcours scolaire</span><span data-lang="en">Education</span></h3>
             <div class="stack">
               <div class="stack-item animate-on-scroll">
-                <h3>BUT Science des Données</h3>
-                <p>IUT Paris Rives de Seine · Paris 16</p>
+                <div class="education-inline">
+                  <img src="assets/images/education/universite-paris-cite-monogramme.png" alt="Université Paris Cité" />
+                  <div>
+                    <h3>BUT Science des Données</h3>
+                    <p>IUT Paris Rives de Seine · Paris 16</p>
+                  </div>
+                </div>
                 <span>09/2024 — 06/2027</span>
                 <a class="program-link" href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2023-12/science-des-donn-es-30879.pdf" target="_blank" rel="noopener">
                   <span data-lang="fr">Programme national</span><span data-lang="en">National syllabus</span>
                 </a>
               </div>
               <div class="stack-item animate-on-scroll">
-                <h3>Baccalauréat STI2D</h3>
-                <p>Lycée Le Corbusier · Poissy</p>
+                <div class="education-inline">
+                  <img src="assets/images/education/lycee-le-corbusier.jpg" alt="Lycée Le Corbusier" />
+                  <div>
+                    <h3>Baccalauréat STI2D</h3>
+                    <p>Lycée Le Corbusier · Poissy</p>
+                  </div>
+                </div>
                 <p>• Maths - Physique et EE</p>
                 <span>09/2022 — 06/2024</span>
               </div>
               <div class="stack-item animate-on-scroll">
-                <h3>Cordées de la Réussite</h3>
-                <p>ESSEC Business School · Cergy</p>
+                <div class="education-inline">
+                  <img src="assets/images/education/essec-business-school.jpg" alt="ESSEC Business School" />
+                  <div>
+                    <h3>Cordées de la Réussite</h3>
+                    <p>ESSEC Business School · Cergy</p>
+                  </div>
+                </div>
                 <p>• Participation à un concours d'éloquence avec l'ESSEC et la Compagnie Amonine.</p>
                 <span>09/2023 — 06/2024</span>
               </div>
@@ -351,7 +391,6 @@
       <div class="container contact">
         <div>
           <h2><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></h2>
-          <p><span data-lang="fr">Disponible pour un stage data ou des projets analytiques.</span><span data-lang="en">Available for data internships or analytics projects.</span></p>
           <div class="contact-cards">
             <div class="contact-card">
               <h3>Email</h3>
@@ -371,7 +410,7 @@
           <h3><span data-lang="fr">Réseaux</span><span data-lang="en">Social</span></h3>
           <p class="muted"><span data-lang="fr">Ajoutez vos liens professionnels.</span><span data-lang="en">Add your professional links.</span></p>
           <div class="contact-actions">
-            <a class="btn primary" href="assets/CV-Younes-Chiker.pdf" download><span data-lang="fr">Télécharger le CV</span><span data-lang="en">Download CV</span></a>
+            <a class="btn primary" href="assets/cv-younes-chiker.pdf" download><span data-lang="fr">Télécharger le CV</span><span data-lang="en">Download CV</span></a>
             <a class="btn ghost linkedin-cta" href="https://www.linkedin.com/in/younes-chiker" target="_blank" rel="noopener"><span data-lang="fr">Voir mon LinkedIn</span><span data-lang="en">Open LinkedIn</span></a>
           </div>
         </div>
@@ -389,4 +428,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
